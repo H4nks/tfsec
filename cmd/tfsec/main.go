@@ -65,7 +65,7 @@ func init() {
 	rootCmd.Flags().BoolVar(&disableColours, "no-color", disableColours, "Disable colored output (American style!)")
 	rootCmd.Flags().BoolVarP(&showVersion, "version", "v", showVersion, "Show version information and exit")
 	rootCmd.Flags().BoolVar(&runUpdate, "update", runUpdate, "Update to latest version")
-	rootCmd.Flags().StringVarP(&format, "format", "f", format, "Select output format: default, json, csv, checkstyle, junit, sarif")
+	rootCmd.Flags().StringVarP(&format, "format", "f", format, "Select output format: default, json, csv, checkstyle, junit, sarif, gitlab_sast")
 	rootCmd.Flags().StringVarP(&excludedRuleIDs, "exclude", "e", excludedRuleIDs, "Provide comma-separated list of rule IDs to exclude from run.")
 	rootCmd.Flags().StringVarP(&includedRuleIDs, "include", "i", includedRuleIDs, "Provide comma-separated list of specific rules to include in the from run.")
 	rootCmd.Flags().StringVar(&filterResults, "filter-results", filterResults, "Filter results to return specific checks only (supports comma-delimited input).")
@@ -453,6 +453,8 @@ func getFormatter() (formatters.Formatter, error) {
 		return formatters.FormatText, nil
 	case "sarif":
 		return formatters.FormatSarif, nil
+	case "gitlab_sast":
+		return formatters.FormatGLSAST, nil
 	default:
 		return nil, fmt.Errorf("invalid format specified: '%s'", format)
 	}

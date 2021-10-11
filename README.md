@@ -185,7 +185,7 @@ output. You can do this using `--no-colour` (or `--no-color` for our American fr
 
 ## Output options
 
-You can output tfsec results as JSON, CSV, Checkstyle, Sarif, JUnit or just plain old human readable format. Use the `--format` flag
+You can output tfsec results as JSON, CSV, Checkstyle, Sarif, JUnit, [Gitlab SAST](https://docs.gitlab.com/ee/user/application_security/sast/) or just plain old human readable format. Use the `--format` flag
 to specify your desired format.
 
 ## Github Security Alerts
