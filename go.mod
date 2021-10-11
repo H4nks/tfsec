@@ -45,12 +45,19 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/zclconf/go-cty v1.9.1
 	github.com/zclconf/go-cty-yaml v1.0.2
+	gitlab.com/gitlab-org/security-products/analyzers/report/v3 v3.4.0
 	golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
-	golang.org/x/sys v0.0.0-20210616094352-59db8d763f22 // indirect
+	golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac // indirect
 	golang.org/x/term v0.0.0-20201210144234-2321bbc49cbf // indirect
 	golang.org/x/text v0.3.7
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+)
+
+require (
+	github.com/pelletier/go-toml v1.9.4 // indirect
+	gitlab.com/gitlab-org/security-products/analyzers/common/v2 v2.24.0 // indirect
+	gitlab.com/gitlab-org/security-products/analyzers/ruleset v1.0.0 // indirect
 )
